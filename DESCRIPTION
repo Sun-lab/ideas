@@ -1,0 +1,10 @@
+Package: ideas
+Type: Package
+Title: Individual level Differential Expression Analysis for Single cells (IDEAS)
+Version: 0.0.9000
+Date: 2021-07-08
+Author: Wei Sun, Mengqi Zhang, Si Liu
+Maintainer: Wei Sun <wsun@fredhutch.org>
+Imports: MASS, pscl, emdbook, parallel, doParallel, doRNG, foreach, stats, MiRKAT, transport, data.table
+Description: Estimate the distribution of gene expression across cells per individual and then compare gene expression across individuals. 
+License: GPL (>= 2)

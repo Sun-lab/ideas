@@ -1,0 +1,15 @@
+
+import(MASS)
+import(pscl)
+import(emdbook)
+import(parallel)
+import(doParallel)
+import(doRNG)
+import(foreach)
+import(stats)
+import(data.table)
+import(MiRKAT)
+import(transport)
+
+export(ideas_dist)
+export(permanova)

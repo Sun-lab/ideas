@@ -1,7 +1,7 @@
 Package: ideas
 Type: Package
 Title: Individual level Differential Expression Analysis for Single cells (IDEAS)
-Version: 0.0.9000
+Version: 1.0.0
 Date: 2021-07-08
 Author: Wei Sun, Mengqi Zhang, Si Liu
 Maintainer: Wei Sun <wsun@fredhutch.org>

@@ -13,16 +13,16 @@ r.seed = 2020, residulize.x = FALSE, delta = 0.5)
 }
 \arguments{
   \item{dist_array}{
-  A three dimensional array with first dimension for the number of genes and the next two dimensions for the the number of individauls. For example, if we study 1000 genes and 20 individuals, it is an arrary of dimension 1000 x 20 x 20. It can be calculated by function \code{ideas_dist}. 
+  A three dimensional array with first dimension for the number of genes and the next two dimensions for the the number of individuals. For example, if we study 1000 genes and 20 individuals, it is an array of dimension 1000 x 20 x 20. It can be calculated by function \code{ideas_dist}. 
 }
   \item{meta_ind}{
   A data.frame of meta information of all the individuals. Each row of \code{meta_ind} corresponds to an individual. At least two columns are required: "individual" for individual labels, and a column specified by \code{var2test} for the variable against which to test DE. The rows of \code{meta_ind} should be one to one correspondence to the rows/columns of each distance matrix dist_array[k,,], where k is the index for the k-th gene. 
 }
   \item{var2test}{
-   A string specificying the name of the variable against which to test DE. This variable should be inlcuded in \code{meta_ind}. 
+   A string specifying the name of the variable against which to test DE. This variable should be included in \code{meta_ind}. 
 }
   \item{var2adjust}{
-   A character vector specificying the name of the variables included as covaraites in DE anlaysis. They should be inlcuded in \code{meta_ind}. 
+   A character vector specifying the name of the variables included as covariates in DE analysis. They should be included in \code{meta_ind}. 
 }
   \item{var2test_type}{
   The type of the variable against which to test DE. 
@@ -37,7 +37,7 @@ r.seed = 2020, residulize.x = FALSE, delta = 0.5)
   To permute \code{var2test}, we can simply permute it or simulate it based on its conditional distribution with respect to \code{var2adjust}. If \code{residulize.x} is TRUE, we simulate it from conditional distribution and permute it otherwise. 
 }
   \item{delta}{
-  When sample size is small, a variable simulated based on conditional distribution with respect to \code{var2adjust} may have very different variance than the observed one. We will discard the permuted variables if its standard deviation is smaller than (1-\code{delta}) or larger than (1+\code{delta}) times of the stand deviation of the un-permuted variable. Usually this only excldue less than one percent of the simulated variables. 
+  When sample size is small, a variable simulated based on conditional distribution with respect to \code{var2adjust} may have very different variance than the observed one. We will discard the permuted variables if its standard deviation is smaller than (1-\code{delta}) or larger than (1+\code{delta}) times of the stand deviation of the un-permuted variable. Usually this only exclude less than one percent of the permutated variables. 
 }
 }
 \details{

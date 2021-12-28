@@ -14,7 +14,7 @@ This is the R package for differential expression analysis using single cell RNA
 
 ## Usage
 
-Here is the example code to run IDEAS using simulated data. First load libraries and simulated data. Here we took 100 genes for illustration. A complete code can be found [here]l(https://github.com/Sun-lab/ideas_pipeline/blob/main/simulation/step2_evaluate_methods.R)
+Here is the example code to run IDEAS using simulated data. First load libraries and simulated data. Here we took 100 genes for illustration. A complete code can be found [here](https://github.com/Sun-lab/ideas_pipeline/blob/main/simulation/step2_evaluate_methods.R)
 
 ```
 library(ideas)
@@ -50,27 +50,27 @@ pval_ideas = permanova(dist1, meta_ind, var2test, var2adjust,
 
 From the above usage example, we can see the two functions that user need to use are ```ideas_dist```, which calculate distance across all individuals, and ```permanova```, which calculate the testing p-values given the distance matrix. Here we give a brief description of the input and output of these two functions. 
 
-### ```ideas_dist'''
+### ```ideas_dist```
 
-The output of  ```ideas_dist''' is a three dimensional array with first dimension for the number of genes and the next two dimensions for the the number of individuals. For example, if we study 1000 genes and 20 individuals, it is an array of dimension 1000 x 20 x 20. Some parameters of ```ideas_dist''' that often need to be set by the users are listed below.
+The output of  ```ideas_dist``` is a three dimensional array with first dimension for the number of genes and the next two dimensions for the the number of individuals. For example, if we study 1000 genes and 20 individuals, it is an array of dimension 1000 x 20 x 20. Some parameters of ```ideas_dist``` that often need to be set by the users are listed below.
 
-- ```fit_method''': The method used to estimate the distribution of gene expression across all the cells per individual. If the input is UMI count data, we recommend  "nb" that stands for negative binomial. If the input is denoised scRNA-seq data by DCA or SAVER, ```fit_method''' should be set as "dca_direct" or "saver_direct", respectively. 
+- ```fit_method```: The method used to estimate the distribution of gene expression across all the cells per individual. If the input is UMI count data, we recommend  "nb" that stands for negative binomial. If the input is denoised scRNA-seq data by DCA or SAVER, ```fit_method``` should be set as "dca_direct" or "saver_direct", respectively. 
 
-- ```count_input''': The input data to be used to calculate distance arrays. If fit_method is "nb", "zinb", or "kde", the count_input should be a matrix of RNAseq counts, with rows for genes and columns for cells. Row names (unique gene ids) and column names (unique cell ids) are required. If fit_method is "dca_direct", the count_input is a list of 3 matrices for mean, over-dispersion, and zero inflation proportion, respectively. If fit_method is "saver_direct", the count_input is a matrix of Poisson mean values after adjusting cell level read-depth.
+- ```count_input```: The input data to be used to calculate distance arrays. If fit_method is "nb", "zinb", or "kde", the count_input should be a matrix of RNAseq counts, with rows for genes and columns for cells. Row names (unique gene ids) and column names (unique cell ids) are required. If fit_method is "dca_direct", the count_input is a list of 3 matrices for mean, over-dispersion, and zero inflation proportion, respectively. If fit_method is "saver_direct", the count_input is a matrix of Poisson mean values after adjusting cell level read-depth.
 
-- ```meta_cell''': A data.frame of meta information of all the cells. The rows of meta_cell should be one to one correspondence to the columns of count_input. Three columns are required: "cell_id" and "individual" for cell id and individual labels, respectively, and a column for cell level read-depth specified by cell_rd_var.
+- ```meta_cell```: A data.frame of meta information of all the cells. The rows of meta_cell should be one to one correspondence to the columns of count_input. Three columns are required: "cell_id" and "individual" for cell id and individual labels, respectively, and a column for cell level read-depth specified by cell_rd_var.
 
-- ```meta_ind''': A data.frame of meta information of all the individuals. Each row of meta_ind corresponds to an individual. At least two columns are required: "individual" for individual labels, and a column specified by var2test for the variable against which to test DE.
+- ```meta_ind```: A data.frame of meta information of all the individuals. Each row of meta_ind corresponds to an individual. At least two columns are required: "individual" for individual labels, and a column specified by var2test for the variable against which to test DE.
 
-- ```var_per_cell''': The variables used for cell level adjustment. They should be included in meta_cell. Cell level read-depth should be included, and other variables such as percentage of ribosome expression or mitochondria expression could be considered too. NOTE: all the variables included will be log-transformed when used as covariates in zinb regression (when fit_method="zinb") or linear regression (when fit_method="kde").
+- ```var_per_cell```: The variables used for cell level adjustment. They should be included in meta_cell. Cell level read-depth should be included, and other variables such as percentage of ribosome expression or mitochondria expression could be considered too. NOTE: all the variables included will be log-transformed when used as covariates in zinb regression (when fit_method="zinb") or linear regression (when fit_method="kde").
 
-- ```var2test''': A string specifying the name of the variable against which to test DE. This variable should be included in meta_ind.
+- ```var2test```: A string specifying the name of the variable against which to test DE. This variable should be included in meta_ind.
 
-- ```var2test_type''': "binary" or "continuous".
+- ```var2test_type```: "binary" or "continuous".
 
-### ```permanova'''
+### ```permanova```
 
-``permanova''' take the distance matrix as input and its output is a vector of p-values for each gene. Most other inputs of ```permanova''' are the same as the inputs for ```ideas_dist''', such as information for cells (```meta_cell''') and individuals (```meta_ind'''). 
+``permanova``` take the distance matrix as input and its output is a vector of p-values for each gene. Most other inputs of ```permanova``` are the same as the inputs for ```ideas_dist```, such as information for cells (```meta_cell```) and individuals (```meta_ind```). 
 
 ## Reference
 

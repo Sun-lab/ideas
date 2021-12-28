@@ -74,4 +74,4 @@ The output of  ```ideas_dist``` is a three dimensional array with first dimensio
 
 ## Reference
 
-M Zhang, S Liu et al. (2021) IDEAS: Individual Level Differential Expression Analysis for Single Cell RNA-seq Data
+M Zhang, S Liu et al. (2021) IDEAS: Individual Level Differential Expression Analysis for Single-cell RNA-seq Data 

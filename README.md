@@ -70,7 +70,7 @@ The output of  ```ideas_dist``` is a three dimensional array with first dimensio
 
 ### ```permanova```
 
-``permanova``` take the distance matrix as input and its output is a vector of p-values for each gene. Most other inputs of ```permanova``` are the same as the inputs for ```ideas_dist```, such as information for cells (```meta_cell```) and individuals (```meta_ind```). 
+```permanova``` take the distance matrix as input and its output is a vector of p-values for each gene. Most other inputs of ```permanova``` are the same as the inputs for ```ideas_dist```, such as information for cells (```meta_cell```) and individuals (```meta_ind```). 
 
 ## Reference
 

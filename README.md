@@ -1,7 +1,7 @@
 # ideas
  Individual level Differential Expression Analysis for Single cells
 
-This is the R package for differential expression analysis using single cell RNA-seq data  of  multiple individuals. The input are scRNA-seq data  and cell level and/or individual-level covariates.  
+This is the R package for differential expression analysis using single cell RNA-seq data  of  multiple individuals. The inputs are scRNA-seq data  and cell level and/or individual-level covariates and the outputs are p-values for all genes tested. This project is licensed under the terms of the MIT license.
 
 
 ## Installation 

@@ -7,7 +7,7 @@ This is the R package for differential expression analysis using single cell RNA
 ## Installation 
  To install this package in R, use 
  
- ```
+ ```R
     library("devtools");
     install_github("Sun-lab/ideas")
  ```
@@ -16,7 +16,7 @@ This is the R package for differential expression analysis using single cell RNA
 
 Here is the example code to run IDEAS using simulated data. First load libraries and simulated data. Here we took 100 genes for illustration. A complete code can be found [here](https://github.com/Sun-lab/ideas_pipeline/blob/main/simulation/step2_evaluate_methods.R)
 
-```
+```R
 library(ideas)
 library(foreach)
 library(doRNG)
@@ -38,7 +38,7 @@ var_per_cell  = "cell_rd"
 ```
 
 Next we ran the analysis in two steps. First calculate the distance matrix by function ```ideas_dist```, and then evaluate the p-value using function ```permanova```.
-```
+```R
 dist1 = ideas_dist(count_matrix, meta_cell, meta_ind, 
                    var_per_cell, var2test, var2adjust, 
                    var2test_type, d_metric = "Was", 

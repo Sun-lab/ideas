@@ -28,7 +28,7 @@ permanova <-
     
     if(! all(columns.meta.ind %in% names(meta_ind))){
       str1 = paste(columns.meta.ind, collapse=", ")
-      stop("names of meta_ind should conttain %s\n")
+      stop("names of meta_ind should conttain: ",str1)
     }
     
     if(length(unique(meta_ind$individual)) != nrow(meta_ind)){

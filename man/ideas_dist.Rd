@@ -19,7 +19,7 @@ empirical_n = 1024)
  The input data to be used to calculate distance arrays. If \code{fit_method} is "nb", "zinb", or "kde", the \code{count_input} should be a matrix of RNAseq counts, with rows for genes and columns for cells. Row names (unique gene ids) and column names (unique cell ids) are required. If \code{fit_method} is "dca_direct", the \code{count_input} is a list of 3 matrices for mean, over-dispersion, and zero inflation proportion, respectively. If \code{fit_method} is "saver_direct", the \code{count_input} is a matrix of Poisson mean values after adjusting cell level read-depth. 
 }
   \item{meta_cell}{
-  A data.frame of meta information of all the cells. The rows of meta_cell should be one to one correspondence to the columns of \code{count_input}. Three columns are required: "cell_id" and "individual" for cell id and individual labels, respectively, and a column for cell level read-depth specified by \code{cell_rd_var}. 
+  A data.frame of meta information of all the cells. The rows of meta_cell should be one to one correspondence to the columns of \code{count_input}. Three columns are required: "cell_id" and "individual" for cell id and individual labels, respectively, and a column for cell level read-depth, which should be included in the \code{var_per_cell} }. 
 }
   \item{meta_ind}{
   A data.frame of meta information of all the individuals. Each row of \code{meta_ind} corresponds to an individual. At least two columns are required: "individual" for individual labels, and a column specified by \code{var2test} for the variable against which to test DE.  

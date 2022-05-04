@@ -1,16 +1,18 @@
 # ideas
- Individual level Differential Expression Analysis for Single cells
+
+Individual level Differential Expression Analysis for Single cells
 
 This is the R package for differential expression analysis using single cell RNA-seq data  of  multiple individuals. The inputs are scRNA-seq data  and cell level and/or individual-level covariates and the outputs are p-values for all genes tested. This project is licensed under the terms of the MIT license.
 
 
 ## Installation 
- To install this package in R, use 
+
+To install this package in R, use 
  
- ```R
-    library("devtools");
-    install_github("Sun-lab/ideas")
- ```
+```R
+library("devtools");
+install_github("Sun-lab/ideas")
+```
 
 ## Usage
 
@@ -38,6 +40,7 @@ var_per_cell  = "cell_rd"
 ```
 
 Next we ran the analysis in two steps. First calculate the distance matrix by function ```ideas_dist```, and then evaluate the p-value using function ```permanova```.
+
 ```R
 dist1 = ideas_dist(count_matrix, meta_cell, meta_ind, 
                    var_per_cell, var2test, var2adjust, 
@@ -72,6 +75,6 @@ The output of  ```ideas_dist``` is a three dimensional array with first dimensio
 
 ```permanova``` take the distance matrix as input and its output is a vector of p-values for each gene. Most other inputs of ```permanova``` are the same as the inputs for ```ideas_dist```, such as information for cells (```meta_cell```) and individuals (```meta_ind```). 
 
-## Reference
+## Citation
 
-M Zhang, S Liu et al. (2021) IDEAS: Individual Level Differential Expression Analysis for Single-cell RNA-seq Data 
+Zhang, M., Liu, S., Miao, Z., Han, F., Gottardo, R., Sun, W. (2022). IDEAS: individual level differential expression analysis for single-cell RNA-seq data. *Genome Biology*, 23(1), 1-17. [[HTML](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-022-02605-1), [PDF](https://genomebiology.biomedcentral.com/track/pdf/10.1186/s13059-022-02605-1.pdf), [Supplement](https://static-content.springer.com/esm/art%3A10.1186%2Fs13059-022-02605-1/MediaObjects/13059_2022_2605_MOESM1_ESM.pdf)]

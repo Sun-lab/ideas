@@ -1,4 +1,11 @@
-# ideas
+<div align="left">
+<a href=""><img src="https://img.shields.io/badge/R-%23276DC3.svg?style=square&logo=r&logoColor=pink&label=ideas" height="75" /></a>
+</div>
+
+<!-- badges: start -->
+![R](https://img.shields.io/badge/R-%23276DC3.svg?style=square&logo=r&logoColor=pink)
+![CRAN status](https://www.r-pkg.org/badges/version/ideas)
+<!-- badges: end -->
 
 Individual level Differential Expression Analysis for Single cells
 
@@ -77,4 +84,4 @@ The output of  ```ideas_dist``` is a three dimensional array with first dimensio
 
 ## Citation
 
-Zhang, M., Liu, S., Miao, Z., Han, F., Gottardo, R., Sun, W. (2022). IDEAS: individual level differential expression analysis for single-cell RNA-seq data. *Genome Biology*, 23(1), 1-17. [[HTML](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-022-02605-1), [PDF](https://genomebiology.biomedcentral.com/track/pdf/10.1186/s13059-022-02605-1.pdf), [Supplement](https://static-content.springer.com/esm/art%3A10.1186%2Fs13059-022-02605-1/MediaObjects/13059_2022_2605_MOESM1_ESM.pdf)]
+[Zhang, M.](https://github.com/mqzhanglab), [Liu, S.](https://github.com/liusi2019), [Miao, Z.](https://stat.uw.edu/about-us/people/zhen-miao), [Han, F.](https://sites.stat.washington.edu/people/fanghan/), Gottardo, R., [Sun, W.](https://github.com/sunway1999) (2022). IDEAS: individual level differential expression analysis for single-cell RNA-seq data. *Genome Biology*, 23(1), 1-17. [[HTML](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-022-02605-1), [PDF](https://genomebiology.biomedcentral.com/track/pdf/10.1186/s13059-022-02605-1.pdf), [Supplement](https://static-content.springer.com/esm/art%3A10.1186%2Fs13059-022-02605-1/MediaObjects/13059_2022_2605_MOESM1_ESM.pdf)]

@@ -5,6 +5,7 @@
 <!-- badges: start -->
 ![R](https://img.shields.io/badge/R-%23276DC3.svg?style=square&logo=r&logoColor=pink)
 ![CRAN status](https://www.r-pkg.org/badges/version/ideas)
+[![DOI](https://zenodo.org/badge/DOI/10.1186/s13059-022-02605-1.svg)](https://doi.org/10.1186/s13059-022-02605-1)
 <!-- badges: end -->
 
 Individual level Differential Expression Analysis for Single cells

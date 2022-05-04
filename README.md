@@ -12,6 +12,10 @@
 
 This is the R package for differential expression analysis using single cell RNA-seq data  of  multiple individuals. The inputs are scRNA-seq data  and cell level and/or individual-level covariates and the outputs are p-values for all genes tested. This project is licensed under the terms of the MIT license.
 
+<p align="center">
+<img src="images/workflow.png" width="50%" />
+<p align="center"><em>An overview of the IDEAS pipeline. Here,we illustrate a toy example with 2 cases and 3 controls, with 2 or 3 cells per individual.</em></p>
+</p>
 
 ## Installation 
 

@@ -87,6 +87,18 @@ The output of  ```ideas_dist``` is a three dimensional array with first dimensio
 
 ```permanova``` take the distance matrix as input and its output is a vector of p-values for each gene. Most other inputs of ```permanova``` are the same as the inputs for ```ideas_dist```, such as information for cells (```meta_cell```) and individuals (```meta_ind```). 
 
+
+###note on input for dca_direct
+
+One of the inputs for ```dca_direct``` is the mean_norm.tsv output from DCA. DCA version before 2021 had mean_norm.tsv as one of the direct output files, but no longer provides it as of the version in Sept. 2021. The command line for running DCA as of Sept. 2021 is 
+
+https://github.com/Sun-lab/ideas_pipeline/blob/main/COVID/1a_dca.sh
+
+mean_norm.tsv needs to be reconstructed from the mean.tsv output of DCA and the original count matrix, and this can be done using the code
+
+https://github.com/Sun-lab/ideas_pipeline/blob/main/COVID/1a_dca_recover_mean_norm.R
+
+
 ## Citation
 
 [Zhang, M.](https://github.com/mqzhanglab), [Liu, S.](https://github.com/liusi2019), [Miao, Z.](https://stat.uw.edu/about-us/people/zhen-miao), [Han, F.](https://sites.stat.washington.edu/people/fanghan/), [Gottardo, R.](https://www.linkedin.com/in/raphg), [Sun, W.](https://github.com/sunway1999) (2022). IDEAS: individual level differential expression analysis for single-cell RNA-seq data. *Genome Biology*, 23(1), 1-17. [[HTML](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-022-02605-1), [PDF](https://genomebiology.biomedcentral.com/track/pdf/10.1186/s13059-022-02605-1.pdf), [Supplement](https://static-content.springer.com/esm/art%3A10.1186%2Fs13059-022-02605-1/MediaObjects/13059_2022_2605_MOESM1_ESM.pdf)]

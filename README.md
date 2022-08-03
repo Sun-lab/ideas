@@ -88,7 +88,7 @@ The output of  ```ideas_dist``` is a three dimensional array with first dimensio
 ```permanova``` take the distance matrix as input and its output is a vector of p-values for each gene. Most other inputs of ```permanova``` are the same as the inputs for ```ideas_dist```, such as information for cells (```meta_cell```) and individuals (```meta_ind```). 
 
 
-### note on input for dca_direct
+### Note on input for dca_direct
 
 One of the inputs for ```dca_direct``` is the mean_norm.tsv output from DCA. DCA version before 2021 had mean_norm.tsv as one of the direct output files, but no longer provides it as of the version in Sept. 2021. The command line for running DCA as of Sept. 2021 is [here](https://github.com/Sun-lab/ideas_pipeline/blob/main/COVID/1a_dca.sh). mean_norm.tsv needs to be reconstructed from the mean.tsv output of DCA and the original count matrix, and this can be done using [this code](https://github.com/Sun-lab/ideas_pipeline/blob/main/COVID/1a_dca_recover_mean_norm.R).
 

@@ -55,7 +55,7 @@ Next we ran the analysis in two steps. First calculate the distance matrix by fu
 
 ```R
 dist1 = ideas_dist(count_matrix, meta_cell, meta_ind, 
-                   var_per_cell, var2test, var2adjust, 
+                   var_per_cell, var2test, 
                    var2test_type, d_metric = "Was", 
                    fit_method = "nb")
 

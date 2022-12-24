@@ -129,7 +129,7 @@ ideas_dist <-
     
     if(! all(columns.meta.ind %in% names(meta_ind))){
       str1 = paste(columns.meta.ind, collapse=", ")
-      stop("names of meta_ind should contain %s\n")
+      stop(sprintf("names of meta_ind should contain %s\n", str1))
     }
     
     if(! setequal(meta_cell$individual, meta_ind$individual)){
